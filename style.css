@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Audiowide&family=Syne:wght@400..800&display=swap');
+body {
+    margin: 20px 0 0 0;
+    padding: 0;
+    background: linear-gradient(180deg, #cacaff, #e0e0fffe)
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(180deg, #7088ff, #ffffff00);
+    border-bottom: 1px solid #9db2ff9c;
+    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Syne';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.accueil section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.accueil h1 {
+    font-size: 4rem;
+    font-family: 'Syne';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    text-align: center;
+
+    margin-top: 90px;
+    margin-bottom: 0;
+
+}
+
+.accueil h2 {
+    font-size: 6rem;
+    font-family: 'Audiowide';
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    text-align: center;
+    margin-top: 0;
+}
+
+.rvr {
+    position: relative; /* Indispensable pour caler le fond derrière */
+    overflow: hidden;  
+    padding: 40px 0; /* Évite que le flou ne dépasse des bords de la section */
+}
+
+.rvr::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* On cale ton image de fond */
+    background-image: url("IMG_1086.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* C'est ici qu'on gère le flou (ajuste les px selon tes goûts) */
+    filter: blur(1px);
+    
+    /* Optionnel : On scale légèrement pour éviter les bords blancs dus au flou */
+    transform: scale(1.05);
+    
+    /* On s'assure que ça reste au second plan */
+    z-index: 1;
+    width: 100%;
+
+    height: auto;
+
+}
+
+/* Le voile sombre s'applique sur un autre pseudo-élément ou un conteneur pour superposer */
+.rvr::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(180deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.5)); /* Ton voile sombre à 50% */
+    z-index: 2;
+}
+
+/* On force le contenu (titres, textes) à passer au-dessus du flou et du voile */
+.rvr > * {
+    position: relative;
+    z-index: 3;
+}
+
+.rvr2 {
+    position: relative; /* Indispensable pour caler le fond derrière */
+    overflow: hidden;  
+    padding: 40px 0; /* Évite que le flou ne dépasse des bords de la section */
+}
+
+.rvr2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    /* On cale ton image de fond */
+    background-image: url("IMG_1086.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* C'est ici qu'on gère le flou (ajuste les px selon tes goûts) */
+    filter: blur(50px);
+    
+    /* Optionnel : On scale légèrement pour éviter les bords blancs dus au flou */
+    transform: scale(1.05);
+    
+    /* On s'assure que ça reste au second plan */
+    z-index: 1;
+    width: 100%;
+
+    height: auto;
+
+}
+
+/* Le voile sombre s'applique sur un autre pseudo-élément ou un conteneur pour superposer */
+.rvr2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.218)); /* Ton voile sombre à 50% */
+    z-index: 2;
+}
+
+/* On force le contenu (titres, textes) à passer au-dessus du flou et du voile */
+.rvr2 > * {
+    position: relative;
+    z-index: 3;
+}
+
+.rvr h2 {
+    font-family: 'Syne';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    text-align: center;
+    color: #ffffff;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rvr h1 {
+    font-family: 'Syne';
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    text-align: center;
+    color: #ffffff;
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rvr h3 {
+    font-family: 'Anton';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    text-align: center;
+    color: #ffffff;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rvr img {
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.rvr2 h2 {
+    font-family: 'Syne';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    text-align: left;
+    color: #ffffff;
+    font-size: 2.7rem;
+    margin: 0 0 20px 30px;
+}
+
+.rvr2 h1 {
+    font-family: 'Syne';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    text-align: left;
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 0 0 20px 30px;
+}
+.rvr2 img {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    align-items: left;
+    margin: 0 0 20px 30px
+
+}
